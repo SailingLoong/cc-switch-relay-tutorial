@@ -1,6 +1,6 @@
 <div align="center">
 
-# cc-switch 中转站省钱教程
+# cc-switch 中转站教程
 
 ### 用 LoongPort（基于 cc-switch 的中转站增强版）给 Claude Code / Codex 接中转站 API——填一个域名，登录一次，剩下全自动
 
@@ -10,7 +10,10 @@
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-lightgrey.svg)](https://github.com/SailingLoong/LoongPort/releases)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-**Codex 只花官方价的 5%，Claude 只花 20%，国内直连。**
+<!-- 2026-09-05 省钱/价格叙事整体下线（对外只讲「方便省心」），原钩子行保留于此、线上不再展示：
+**Codex 只花官方价的 5%，Claude 只花 20%，国内直连。** -->
+
+**国内直连，装上就能用。**
 
 </div>
 
@@ -18,7 +21,7 @@
 
 ## 这篇教程解决什么问题
 
-你想用 Claude Code 或 Codex CLI，但官方 API 按官网价计费，付款还要外卡。中转站能把成本打到官方价的一两成，可接入流程很劝退：注册后要进控制台手建 API Key、抄对 `base_url`、翻出各 CLI 的配置文件把字段写对——Codex 一套、Claude 一套，换个档位再来一遍。
+你想用 Claude Code 或 Codex CLI，但官方 API 付款要外卡，配置门槛也不低。中转站没有这些门槛，可接入流程很劝退：注册后要进控制台手建 API Key、抄对 `base_url`、翻出各 CLI 的配置文件把字段写对——Codex 一套、Claude 一套，换个档位再来一遍。
 
 如果你用过 [cc-switch](https://github.com/farion1231/cc-switch)（GitHub 12 万+ Star 的 AI CLI 供应商切换器），「切换」这步已经被解决了；但中转站特有的麻烦——**余额在哪看、有没有被多扣钱、档位挂了谁来切**——还是得自己操心。
 
@@ -29,6 +32,9 @@
 > **不用先装 cc-switch。** LoongPort 是独立应用，直接下载就能用——本教程从头到尾只需要这一个软件。
 >
 > 已在用 cc-switch？两边数据目录分开（`~/.cc-switch/` 与 `~/.loongport/`），可以同时装、同时开；LoongPort 能一键把 cc-switch 的现有配置搬过来（见[下文](#从-cc-switch-一键导入)），搬完用 LoongPort 就行。
+
+<!-- 2026-09-05 省钱/价格叙事整体下线（对外只讲「方便省心」），本节保留于源码、线上不再展示；
+     恢复时取消注释，并同步 LoongPort 仓 README 双语、官网 /pricing 与 llms.txt（唯源见 LOONGPORT.md）。
 
 ## 能省多少钱
 
@@ -41,6 +47,7 @@
 
 即 Codex 约为官方 API 成本的 **1.5%**、Claude 约 **15%**（随档位和站点浮动，上文「5% / 20%」留了余量）。完整推导见
 [loongport.dev/zh/pricing](https://loongport.dev/zh/pricing)。
+-->
 
 ## LoongPort 在 cc-switch 基座上，为中转站加了什么
 
@@ -193,7 +200,7 @@ LoongPort 会打开**这个站自己的**注册页：
 不需要。LoongPort 是独立应用，下载即用；cc-switch 只是它的上游基座。这篇教程反复提到 cc-switch，一是因为 LoongPort 基于它构建，二是想帮已经在用 cc-switch 的同学一键迁移过来。
 
 **和 cc-switch 什么关系？**
-LoongPort 从 [cc-switch](https://github.com/farion1231/cc-switch) v3.19.1 fork、持续合并上游，图标衍生自它，MIT 协议与版权声明保留在 [LoongPort 仓库](https://github.com/SailingLoong/LoongPort)里。cc-switch 是通用的多供应商管理器；LoongPort 专注「用中转服务省钱跑 AI CLI」这一条链路。感谢 [@farion1231](https://github.com/farion1231) 打的基座。
+LoongPort 从 [cc-switch](https://github.com/farion1231/cc-switch) v3.19.1 fork、持续合并上游，图标衍生自它，MIT 协议与版权声明保留在 [LoongPort 仓库](https://github.com/SailingLoong/LoongPort)里。cc-switch 是通用的多供应商管理器；LoongPort 专注「用中转服务省心跑 AI CLI」这一条链路。感谢 [@farion1231](https://github.com/farion1231) 打的基座。
 
 **两个能同时装吗？**
 能。数据目录分开（`~/.cc-switch/` 与 `~/.loongport/`），互不干扰。
@@ -215,7 +222,7 @@ macOS 与 Windows 功能一致；Linux 在做。
 | | |
 |---|---|
 | **LoongPort 主仓库** | [github.com/SailingLoong/LoongPort](https://github.com/SailingLoong/LoongPort)——觉得有用点个 ⭐，新用户跟着应用内引导点 Star 还能领 $5 注册礼（活动细节以应用内提示为准） |
-| **官网** | [loongport.dev](https://loongport.dev)——下载、定价推导、给中转站负责人的接入指南 |
+| **官网** | [loongport.dev](https://loongport.dev)——下载、给中转站负责人的接入指南 |
 | **cc-switch 上游** | [github.com/farion1231/cc-switch](https://github.com/farion1231/cc-switch) |
 
 <div align="center">
